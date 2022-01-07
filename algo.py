@@ -5,11 +5,38 @@ import random
 
 def calculateDefect(timetable: Timetable) -> int:
     defects = 0
+    subjects = {}
+    for s in list(timetable.slmap.map.keys()):
+        subjects[s] = 0
     for day in timetable.days:
+        ss = {}
+        for s in list(timetable.slmap.map.keys()):
+            ss[s] = 0
         for i in range(1, 6):
             if day.hours[i].period.subject == day.hours[i - 1].period.subject:
-                defects += 1
+                defects += 4
+        for hour in day.hours:
+            ss[hour.period.subject] += 1
+        for s in ss:
+            if ss[s] >= 3:
+                defects += ss[s] - 2
+    for day in timetable.days:
+        for h in day.hours:
+            subjects[h.period.subject] += 1
+
+    for i in range(len(subjects.keys())):
+        defects += 2 * abs(subjects[list(subjects.keys())[i]] -
+                           getExpectedCount(list(subjects.keys())[i], timetable.slmap))
+
     return defects
+
+
+def getExpectedCount(s: Subject, slmap: SubjectLecturerMap):
+    sl = [sb for sb in slmap.map]
+    sd = {}
+    for subj in sl:
+        sd[subj] = 6
+    return sd[s]
 
 
 def calculateDefects(timetables):

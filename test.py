@@ -1,4 +1,5 @@
 from algo import *
+from jsonhelpers import *
 
 subjectnames = ["COA", "DM", "DS", "Python",
                 "BEFA", "MSF", "DS Lab", "Python Lab"]
@@ -43,6 +44,8 @@ for i in range(100):
 
 ta[0].print()
 print(calculateDefect(ta[0]))
+
+putToJSON(TimetableToJSON(ta[0]), "tt.json")
 
 
 # t = []
