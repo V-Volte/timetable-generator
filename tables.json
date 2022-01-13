@@ -1,0 +1,275 @@
+{
+"name" : "RandomTable",
+"days" : [
+{
+"name" : "Day",
+"hours" : [
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "BEFA"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "MSF"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "Python"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "COA",
+"subject" : "COA"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "BEFA",
+"subject" : "BEFA"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "DM"
+}}]},
+{
+"name" : "Day",
+"hours" : [
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "MSF",
+"subject" : "MSF"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "COA"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "DM",
+"subject" : "DM"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "COA",
+"subject" : "COA"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Python",
+"subject" : "Python"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "DM"
+}}]},
+{
+"name" : "Day",
+"hours" : [
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "MSF"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "COA"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "DS",
+"subject" : "DS"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "BEFA",
+"subject" : "BEFA"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Python",
+"subject" : "Python"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "DS",
+"subject" : "DS"
+}}]},
+{
+"name" : "Day",
+"hours" : [
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Python",
+"subject" : "Python"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "DS"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "COA"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "BEFA"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "Python"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "DM"
+}}]},
+{
+"name" : "Day",
+"hours" : [
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "MSF",
+"subject" : "MSF"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "BEFA"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "MSF",
+"subject" : "MSF"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "DM",
+"subject" : "DM"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "DS"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "BEFA"
+}}]},
+{
+"name" : "Day",
+"hours" : [
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "MSF",
+"subject" : "MSF"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "COA",
+"subject" : "COA"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "DS"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "Period",
+"subject" : "Python"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "DS",
+"subject" : "DS"
+}},
+{
+"name" : "Hour",
+"period" : 
+{
+"name" : "DM",
+"subject" : "DM"
+}}]}],
+"slmap" : {"COA": "A", "DM": "B", "DS": "C", "Python": "D", "BEFA": "E", "MSF": "F"}
+}

@@ -2,3 +2,5 @@ __pycache__/
 *.txt
 .gitignore
 *.json.json
+*_test.json
+gen.py

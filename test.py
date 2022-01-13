@@ -45,7 +45,7 @@ for i in range(50):
 ta[0].print()
 print(calculateDefect(ta[0]))
 
-putToJSON(ta[0].toJSON(), "tt.json")
+putToJSON(ta[0].toJSON(), "tables")
 
 
 # t = []
