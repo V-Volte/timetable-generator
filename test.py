@@ -1,5 +1,5 @@
 from algo import *
-from jsonhelpers import *
+from jsonhelpers import putToJSON
 
 subjectnames = ["COA", "DM", "DS", "Python",
                 "BEFA", "MSF", "DS Lab", "Python Lab"]
@@ -36,16 +36,16 @@ c1 = Class("AI ML", slmap)
 # print(compareTables(tt1, tt3))
 # print(compareTables(tt2, tt3))
 
-t = [constructRandomTimetable(c1) for i in range(100)]
+t = [constructRandomTimetable(c1) for i in range(50)]
 ta = t
 
-for i in range(100):
+for i in range(50):
     ta = selectiveBreed(ta, c1, mut=0.05)
 
 ta[0].print()
 print(calculateDefect(ta[0]))
 
-putToJSON(TimetableToJSON(ta[0]), "tt.json")
+putToJSON(ta[0].toJSON(), "tt.json")
 
 
 # t = []
