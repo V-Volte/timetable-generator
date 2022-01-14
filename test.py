@@ -1,5 +1,5 @@
-from algo import *
-from jsonhelpers import putToJSON
+from scripts.algo import *
+from scripts.jsonhelpers import putToJSON
 
 subjectnames = ["COA", "DM", "DS", "Python",
                 "BEFA", "MSF", "DS Lab", "Python Lab"]

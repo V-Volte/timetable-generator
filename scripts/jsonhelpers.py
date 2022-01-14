@@ -1,4 +1,4 @@
-from classes import *
+from scripts.classes import *
 import json
 
 

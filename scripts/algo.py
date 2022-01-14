@@ -1,5 +1,5 @@
 from typing import List
-from classes import *
+from scripts.classes import *
 import random
 
 
@@ -31,7 +31,7 @@ def calculateDefect(timetable: Timetable) -> int:
     return defects
 
 
-def getExpectedCount(s: Subject, slmap: SubjectLecturerMap):
+def getExpectedCount(s: Subject, slmap: SubjectLecturerMap) -> int:
     sl = [sb for sb in slmap.map]
     sd = {}
     for subj in sl:
@@ -39,7 +39,7 @@ def getExpectedCount(s: Subject, slmap: SubjectLecturerMap):
     return sd[s]
 
 
-def calculateDefects(timetables):
+def calculateDefects(timetables: List[Timetable]) -> int:
     defects = 0
 
     for timetable in timetables:
@@ -62,7 +62,7 @@ def calculateDefects(timetables):
     # return defects
 
 
-def getRandom(l: list):
+def getRandom(l: list) -> object:
     return random.choice(l)
 
 
@@ -115,7 +115,7 @@ def compareTables(ta: Timetable, tb: Timetable):
     return diffs
 
 
-def selectiveBreed(timetables, c: Class, n=100, sampleSize=40, mut=0.1):
+def selectiveBreed(timetables, c: Class, n=100, sampleSize=40, mut=0.1) -> list:
     tables = []
     t = timetables
     timetables.sort(key=calculateDefect)
