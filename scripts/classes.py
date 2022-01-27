@@ -167,17 +167,23 @@ class SubjectLecturerMap(Entity):
         for lectsub in zip(subj, lect):
             self.map[lectsub[0]] = lectsub[1]
 
+    def keys(self):
+        return self.map.keys()
+
     def __getitem__(self, key):
         return self.map[key]
 
     def toJSON(self) -> str:
         s = "{"
         i = 0
-        for key in list(self.keys):
+        for key in self.map.keys():
             i += 1
             s += f'"{str(key)}" : "{str(self.map[key])}"'
-            if i == len(list(self.keys)):
+            if i == len(self.keys()):
                 s += ','
             s += '\n'
         s += "}"
         return s
+
+    def subjectList(self):
+        return self.keys()

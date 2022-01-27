@@ -1,8 +1,39 @@
 let t = document.getElementById("ttdiv")
 
-fname = '../tables.json'
 
-function constructFromJSON() {
+fname = '../tables_mt_test.json'
+let i = 0;
+
+function construct() {
+    $.getJSON(fname, function(json) {
+        json.forEach(table => {
+            let t = document.createElement('div');
+            t.classList += 'ttablediv';
+            let j = 0;
+            let days = table.days;
+            days.forEach(day => {
+                let d = document.createElement('div');
+                let d0 = document.createElement('div');
+                d0.classList += 'dayheading';
+                d0.innerHTML = getDay(j);
+                t.appendChild(d0);
+                let hours = day.hours;
+                hours.forEach(hour => {
+                    let h = document.createElement('div');
+                    h.innerHTML = hour.period.subject;
+                    h.classList += 'hour';
+                    t.appendChild(h);
+                });
+                j++;
+            })
+            document.body.innerHTML += "Table " + ++i + '<br>';
+            document.body.appendChild(t);
+            document.body.innerHTML += '<br><br>';
+        })
+    })
+}
+
+function constructFromJSON(t) {
     let i = 0;
     $.getJSON(fname, function(json) {
         let days = json.days;
@@ -44,4 +75,6 @@ function getDay(i) {
     return days[i];
 }
 
-constructFromJSON();
+construct();
+
+//constructFromJSON();

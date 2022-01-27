@@ -1,6 +1,7 @@
 from typing import List
 from scripts.classes import *
 import random
+import threading
 
 
 def calculateDefect(timetable: Timetable) -> int:
@@ -127,3 +128,11 @@ def selectiveBreed(timetables, c: Class, n=100, sampleSize=40, mut=0.1) -> list:
         tables.append(getChildTimetable(c, t1[0], t2[0], mut))
     tables.sort(key=calculateDefect)
     return tables
+
+
+def getTimetable(c: Class, n=100, sampleSize=40, mut=0.1):
+    tables = [constructRandomTimetable(
+        c, f"Timetable{i}", c.lectsubj.subjectList()) for i in range(n)]
+    while calculateDefect(tables[0]) != 0:
+        tables = selectiveBreed(tables, c, n, sampleSize, mut)
+    return tables[0]

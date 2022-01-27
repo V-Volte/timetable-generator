@@ -1,5 +1,7 @@
 from scripts.algo import *
 from scripts.jsonhelpers import putToJSON
+from scripts.bunch import *
+import time
 
 subjectnames = ["COA", "DM", "DS", "Python",
                 "BEFA", "MSF", "DS Lab", "Python Lab"]
@@ -36,17 +38,32 @@ c1 = Class("AI ML", slmap)
 # print(compareTables(tt1, tt3))
 # print(compareTables(tt2, tt3))
 
-t = [constructRandomTimetable(c1) for i in range(50)]
-ta = t
+# t = [constructRandomTimetable(c1) for i in range(50)]
+# ta = t
 
-for i in range(50):
-    ta = selectiveBreed(ta, c1, mut=0.05)
+# for i in range(50):
+#     ta = selectiveBreed(ta, c1, mut=0.05)
 
-ta[0].print()
-print(calculateDefect(ta[0]))
+# ta[0].print()
+# print(calculateDefect(ta[0]))
 
-putToJSON(ta[0].toJSON(), "tables")
+# putToJSON(ta[0].toJSON(), "tables")
 
+t = time.time()
+
+# putToJSON(getTimetable(c1).toJSON(), "tables.json")
+
+l = getTablePopulation(c1)
+
+print(time.time() - t)
+
+s = ""
+
+for i in l:
+    s += i.toJSON() + '\n\n'
+
+putToJSON(s, "tables_mt_test")
+# print(slmap.toJSON())
 
 # t = []
 # for i in range(6):
